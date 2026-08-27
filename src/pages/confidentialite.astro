@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const derniereMiseAJour = '27 août 2026';
+---
+
+<Layout title="Politique de confidentialité — Lumakids">
+	<main>
+		<h1>Politique de confidentialité</h1>
+		<p class="maj">Dernière mise à jour : {derniereMiseAJour}</p>
+
+		<p>
+			Cette politique de confidentialité décrit comment l'application <strong>Lumakids</strong>
+			(« l'application », « nous ») collecte, utilise et protège les informations
+			lorsque vous utilisez notre application mobile.
+		</p>
+
+		<h2>1. Informations que nous collectons</h2>
+		<p>
+			Lumakids est conçue pour être utilisée par des enfants sous la supervision d'un
+			parent ou tuteur. Nous limitons la collecte de données au strict nécessaire :
+		</p>
+		<ul>
+			<li>
+				<strong>Données d'achat</strong> : lorsque vous effectuez un achat intégré
+				(abonnement), notre prestataire de gestion des abonnements (RevenueCat) traite un
+				identifiant utilisateur anonyme et les informations de transaction fournies par
+				l'App Store / le Google Play Store. Nous ne recevons jamais vos informations de
+				paiement (numéro de carte bancaire, etc.).
+			</li>
+			<li>
+				<strong>Données techniques minimales</strong> : identifiant d'appareil anonymisé,
+				utilisé uniquement pour faire fonctionner les achats intégrés et la synchronisation
+				de l'abonnement entre appareils.
+			</li>
+		</ul>
+		<p>
+			Nous ne collectons pas de nom, d'adresse e-mail, de localisation précise ni de
+			contenu généré par l'enfant, sauf mention contraire ci-dessus.
+		</p>
+
+		<h2>2. Comment nous utilisons ces informations</h2>
+		<ul>
+			<li>Fournir et gérer les abonnements et achats intégrés</li>
+			<li>Assurer le bon fonctionnement technique de l'application</li>
+			<li>Répondre aux demandes d'assistance</li>
+		</ul>
+
+		<h2>3. Partage des informations</h2>
+		<p>
+			Nous ne vendons pas vos données. Nous partageons certaines informations
+			strictement nécessaires avec :
+		</p>
+		<ul>
+			<li>
+				<strong>RevenueCat</strong> — gestion des abonnements et achats intégrés
+				(<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">politique de confidentialité de RevenueCat</a>)
+			</li>
+			<li>
+				<strong>Apple App Store / Google Play Store</strong> — traitement des paiements
+			</li>
+		</ul>
+
+		<h2>4. Protection des enfants</h2>
+		<p>
+			Lumakids ne diffuse pas de publicité ciblée et ne collecte pas de données
+			personnelles identifiables auprès des enfants. L'application est conçue dans le
+			respect des réglementations applicables à la protection des mineurs en ligne
+			(notamment COPPA aux États-Unis et RGPD en Europe).
+		</p>
+
+		<h2>5. Sécurité</h2>
+		<p>
+			Nous mettons en œuvre des mesures raisonnables pour protéger les informations
+			traitées par l'application contre l'accès non autorisé, la perte ou l'altération.
+		</p>
+
+		<h2>6. Vos droits</h2>
+		<p>
+			Si vous êtes un parent ou tuteur et souhaitez obtenir des informations sur les
+			données associées à l'appareil de votre enfant, ou en demander la suppression,
+			contactez-nous à l'adresse ci-dessous.
+		</p>
+
+		<h2>7. Modifications de cette politique</h2>
+		<p>
+			Cette politique peut être mise à jour occasionnellement. La date de dernière mise
+			à jour est indiquée en haut de cette page.
+		</p>
+
+		<h2>8. Contact</h2>
+		<p>
+			Pour toute question concernant cette politique de confidentialité, contactez-nous
+			à : <a href="mailto:contact@lumakids.app">contact@lumakids.app</a>
+		</p>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem 5rem;
+		font-family: system-ui, sans-serif;
+		color: #1a1a2e;
+		line-height: 1.65;
+	}
+
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 0.25rem;
+	}
+
+	.maj {
+		color: #666;
+		font-size: 0.9rem;
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+		margin-top: 2.25rem;
+	}
+
+	a {
+		color: #208aef;
+	}
+</style>
