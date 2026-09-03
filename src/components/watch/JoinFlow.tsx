@@ -9,8 +9,10 @@ type Stage = 'form' | 'pending';
  * Appairage du navigateur comme un appareil « web » du foyer, avec le même
  * protocole que l'app mobile (`App/src/app/onboarding/join-code.tsx` +
  * `pending.tsx`, fusionnés ici en un seul composant) : un parent de l'app
- * génère un code à 6 chiffres depuis Réglages ▸ Ajouter un appareil, ce
- * navigateur le saisit, puis attend l'approbation en réactif.
+ * génère un code à 6 chiffres depuis l'Accueil ▸ « Inviter un second parent »
+ * (voir `App/src/app/(tabs)/(home)/index.tsx`, `ParentHome` — il n'y a PAS
+ * d'entrée équivalente dans Réglages), ce navigateur le saisit, puis attend
+ * l'approbation en réactif.
  *
  * `requesterToken` est un identifiant que CE navigateur invente lui-même —
  * avant l'appairage, il n'a aucune identité connue de Convex, donc rien
@@ -102,7 +104,7 @@ export function JoinFlow({ onPaired }: { onPaired: (session: StoredWebSession) =
     <div className="watch-card">
       <h2>Rejoindre votre foyer</h2>
       <p className="watch-muted">
-        Dans l’app, allez dans Réglages ▸ Ajouter un appareil ▸ Inviter un parent, puis saisissez le
+        Dans l’app, sur l’écran d’accueil, touchez « Inviter un second parent », puis saisissez le
         code ici.
       </p>
 

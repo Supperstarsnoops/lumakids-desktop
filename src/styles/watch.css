@@ -3,12 +3,20 @@
  * `<style>` scoped d'Astro : le contenu est entièrement rendu par un îlot
  * `client:only="react"` (voir `WatchApp.tsx`), sur lequel le hachage de
  * classes scoped d'Astro ne s'applique pas.
+ *
+ * Palette claire, pas sombre : le reste du site (`confidentialite.astro`, la
+ * page d'accueil) est en clair, et ce sont les mêmes tokens que le thème
+ * clair de l'app (`App/src/constants/theme.ts`), pour que la visionneuse ne
+ * détonne pas visuellement à côté du reste de Lumakids. Seul l'écran
+ * d'appel (`.watch-call` et ce qui suit) reste noir : c'est un écran vidéo,
+ * pas une page de contenu — l'app fait exactement pareil sur son propre
+ * écran d'appel, indépendamment du thème clair/sombre choisi par ailleurs.
  */
 
 .watch-shell {
   min-height: 100vh;
-  background: #0d0d12;
-  color: #ffffff;
+  background: #ffffff;
+  color: #0d0d12;
   font-family: system-ui, sans-serif;
   display: flex;
   flex-direction: column;
@@ -33,7 +41,7 @@
 .watch-card {
   width: 100%;
   max-width: 360px;
-  background: #1c1c22;
+  background: #f0f1f4;
   border-radius: 20px;
   padding: 2rem 1.75rem;
   display: flex;
@@ -55,14 +63,14 @@
 }
 
 .watch-muted {
-  color: #9b9ba5;
+  color: #6b6b75;
   font-size: 0.9rem;
   line-height: 1.5;
   margin: 0;
 }
 
 .watch-error {
-  color: #e66767;
+  color: #c0392b;
   font-size: 0.9rem;
   margin: 0;
 }
@@ -76,9 +84,9 @@
   font-variant-numeric: tabular-nums;
   padding: 0.75rem;
   border-radius: 12px;
-  border: 1px solid #2e3135;
-  background: #0d0d12;
-  color: #ffffff;
+  border: 1px solid #e0e1e6;
+  background: #ffffff;
+  color: #0d0d12;
 }
 
 .watch-text-input {
@@ -87,9 +95,9 @@
   font-size: 1rem;
   padding: 0.65rem 0.85rem;
   border-radius: 12px;
-  border: 1px solid #2e3135;
-  background: #0d0d12;
-  color: #ffffff;
+  border: 1px solid #e0e1e6;
+  background: #ffffff;
+  color: #0d0d12;
 }
 
 .watch-button {
@@ -97,7 +105,7 @@
   padding: 0.85rem;
   border: none;
   border-radius: 999px;
-  background: #4165b1;
+  background: #31508f;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 700;
@@ -118,13 +126,15 @@
 .watch-link {
   background: none;
   border: none;
-  color: #4165b1;
+  color: #31508f;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   padding: 0;
 }
 
+/* Réservé aux liens posés SUR l'écran d'appel noir (`.watch-call-header`) :
+   un lien bleu sur fond blanc n'a pas besoin de cette variante. */
 .watch-link-light {
   color: #ffffff;
 }
@@ -133,8 +143,8 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 3px solid #2e3135;
-  border-top-color: #4165b1;
+  border: 3px solid #e0e1e6;
+  border-top-color: #31508f;
   animation: watch-spin 0.8s linear infinite;
 }
 
@@ -169,7 +179,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: #0d0d12;
+  background: #ffffff;
   border-radius: 14px;
   padding: 0.85rem 1rem;
 }
@@ -183,6 +193,11 @@
 .watch-station-name {
   font-weight: 600;
 }
+
+/*
+ * À partir d'ici, écran d'appel : reste volontairement noir, voir le
+ * commentaire de tête.
+ */
 
 .watch-call {
   position: fixed;
